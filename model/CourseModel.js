@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
 const CourseSchema=mongoose.Schema({
-    id:{type:String, required:true},
+    courseId:{type:String, required:true},
     title:{type:String, required:true},
     category:{type:String, required:true},
     difficulty:{type:String, required:true},
