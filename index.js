@@ -6,7 +6,7 @@ const database = require('./Config/db');   //importig database connectivity with
 const authMiddleware=require('./Middleware/auth1')//importing middleware
 server.use(express.json());
 
-
+const PORT = process.env.PORT || 7070;
 
 // get for all cources
 // server.get("/",async(req,res)=>{
@@ -136,7 +136,7 @@ server.get('/my-courses', authMiddleware, async (req, res) => {
 
 
 // connectivity with server  , created server
-server.listen(7070, async () => {
+server.listen(PORT, async () => {
     try {
         await database;
         console.log("Server connected to database");
